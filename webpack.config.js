@@ -3,6 +3,7 @@ var babel = require('babel-core');
 var path = require('path');
 
 module.exports = {
+    target: 'electron-main',
     entry: './app/index.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
