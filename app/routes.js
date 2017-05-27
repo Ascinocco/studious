@@ -1,11 +1,9 @@
 import VueRouter from 'vue-router';
 
-import Login from './components/Login.vue';
-import Register from './components/Register.vue';
+import Dashboard from './components/Dashboard.vue';
 
 const routes = [
-    { path: '/', component: Login },
-    { path: '/register', component: Register }
+    { path: '/', component: Dashboard },
 ];
 
 export default new VueRouter({
