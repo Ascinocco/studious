@@ -23,7 +23,13 @@ if (!fs.existsSync(dbFilePath)) {
 let db = low(dbFilePath + dbFileName);
 
 let schema = {
-    users: [],
+    user: {
+        username: myUsername,
+        name: '',
+        profilePicturePath: '',
+        theme: 'default',
+        isFirstRun: true
+    },
     classes: [],
     homework: []
 }
