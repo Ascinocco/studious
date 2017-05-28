@@ -18,7 +18,7 @@
                         </li>
                     </ul>
                 </li>
-                <li>Color: <i class="inner-page-classColor" v-bind:style="{ backgroundColor: this.selectedClass.color }">&nbsp;</i></li>
+                <li>Color:&nbsp;<i class="inner-page-classColor" v-bind:style="{ backgroundColor: this.selectedClass.color }"></i></li>
             </ul>
         </div>
 

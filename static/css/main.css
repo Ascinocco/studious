@@ -18,13 +18,13 @@
 }
 
 .inner-page-classColor {
-    padding: 0px 15px 0px 0px;
+    padding: 0px 8px 0px 8px;
     margin: 0px;
     border: 1px solid;
 }
 
 .card-classColor {
-    padding: 0px 18px 0px 0px;
+    padding: 8px;
     margin: 0px;
     border: 1px solid;
     float: right;

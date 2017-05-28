@@ -1,7 +1,7 @@
 <template>
     <div class="card">
         <div id="activeCardContainer">
-            <i class="card-classColor" v-bind:style="{ backgroundColor: this.classData.color }">&nbsp;</i>
+            <i class="card-classColor" v-bind:style="{ backgroundColor: this.classData.color }"></i>
         </div>
 
         <div class="card-header">
