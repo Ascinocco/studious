@@ -25,6 +25,7 @@
     "lodash": "^4.17.4",
     "lowdb": "^0.16.2",
     "moment": "^2.18.1",
+    "semantic-ui": "^2.2.10",
     "source-map-loader": "^0.2.1",
     "ts-loader": "^2.1.0",
     "typescript": "^2.3.3",
