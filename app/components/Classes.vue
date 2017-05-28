@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>Dashboard</h1>
+        <h1>Classes</h1>
     </div>
 </template>
 
@@ -11,5 +11,4 @@
 </script>
 
 <style>
-
 </style>

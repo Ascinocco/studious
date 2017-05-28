@@ -1,13 +1,13 @@
 <template>
-    <div class="ui vertical inverted sidebar menu">
-        <div class="item">
-            <div class="header">App</div>
-            <div class="menu">
-                <router-link to="/" class="item">Dashboard</router-link>
-                <router-link to="/classes" class="item">Classes</router-link>
-                <router-link to="/homework" class="item">Homework</router-link>
-                <router-link to="/settings" class="item">Settings</router-link>
-            </div>
+    <div class="row">
+        <div class="col col-12">
+            <nav class="tabs sideNav-tabsMarginTop" data-component="tabs">
+                <ul>
+                    <router-link tag="li" to="/" exact><a>Classes</a></router-link>
+                    <router-link tag="li" to="/homework" exact><a>Homework</a></router-link>
+                    <router-link tag="li" to="/settings" exact><a>Settings</a></router-link>
+                </ul>
+            </nav>
         </div>
     </div>
 </template>
@@ -19,4 +19,7 @@
 </script>
 
 <style>
+    .sideNav-tabsMarginTop {
+        margin-top: 10px;
+    }
 </style>
