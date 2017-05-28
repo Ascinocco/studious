@@ -1,6 +1,6 @@
 import VueRouter from 'vue-router';
 
-import Classes from './components/Classes.vue';
+import Classes from './components/Classes/Classes.vue';
 import Homework from './components/Homework.vue';
 import Settings from './components/Settings.vue';
 

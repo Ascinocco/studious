@@ -42,11 +42,15 @@ export class StudiousClass extends Studious
 
     }
 
-    public static find (query: any): StudiousClass
+    public static find (query?: any): StudiousClass
     {
-        return StudiousClass.db.get('classes')
-            .find(query)
-            .value();
+        if (query) {
+            return StudiousClass.db.get('classes')
+                .find(query)
+                .value();
+        } else {
+            return StudiousClass.db.get('classes').value(); // returns everything
+        }
     }
 
     private static parseClassPeriods(dates: Array<any>): Array<any>

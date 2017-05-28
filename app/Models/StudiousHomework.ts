@@ -34,11 +34,14 @@ export class StudiousHomework extends Studious
         this.isComplete = false;
     }
 
-    public static find(query: any): StudiousHomework
+    public static find(query?: any): StudiousHomework
     {
-        return StudiousHomework.db.get('homework')
-            .find(query)
-            .value();
+        if (query) {
+            return StudiousHomework.db.get('homework')
+                .find(query)
+                .value();
+        } else {
+            return StudiousHomework.db.get('homework').value();
+        }
     }
-
 }

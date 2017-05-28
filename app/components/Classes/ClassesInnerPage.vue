@@ -1,30 +1,5 @@
 <template>
-    <div class="row">
-        <div class="col col-4 studious-container classes-leftPadding">
-            <div class="card" v-if="true">
-                <div id="activeCardContainer">
-                    <i class="card-active" style="float: right;">&nbsp;</i>
-                </div>
-
-                <div class="card-header">
-                    <h3>Intro to C++</h3>
-                </div>
-
-                <div class="card-body">
-                    <p>Some generic description of the class</p>
-                </div>
-
-                <div class="col card-footer">
-                    <!--<button class="button secondary outline small">View</button>
-                    <button class="button secondary outline small">Delete</button> -->
-                    <button class="button secondary outline small">
-                        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <div class="col col-7 studious-container classes-rightPadding">
+    <div class="col col-7 studious-container classes-rightPadding">
             <div class="inner-page">
                 <div class="inner-header">
                     <h2>Intro to C++</h2>
@@ -53,7 +28,6 @@
                 </div>
             </div>
         </div>
-    </div>
 </template>
 
 <script>
@@ -63,11 +37,4 @@
 </script>
 
 <style>
-    .classes-rightPadding {
-        padding-right: 50px;
-    }
-
-    .classes-leftPadding {
-        padding-left: 50px;
-    }
 </style>
