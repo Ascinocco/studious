@@ -10,6 +10,8 @@
   },
   "author": "Anthony Scinocco",
   "dependencies": {
+    "@types/lowdb": "^0.15.0",
+    "@types/node": "^7.0.22",
     "axios": "^0.16.1",
     "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",
