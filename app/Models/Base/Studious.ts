@@ -9,31 +9,33 @@ let db = low(dbFile);
 
 export class Studious
 {
-    public static collection: string = '';
+    protected static db: any = db;
+    public collection: string;
     public id: string;
 
-    constructor() {
+    constructor (data: any, collection: string) {
         this.id = uniqid();
-    }
+        data.id = this.id;
+        this.collection = collection;
 
-    public static find(query: any): any
-    {
-        return db.get(Studious.collection)
-            .find(query)
-            .value();
+        alert(this.collection);
+
+        db.get(this.collection)
+            .push(data)
+            .write();
     }
 
     public update (updates: any): any
     {
-        db.get(Studious.collection)
+        db.get(this.collection)
             .find({ id: this.id })
             .assign(updates)
             .write();
     }
 
-    public delete(): any
+    public delete (): any
     {
-        db.get(Studious.collection)
+        db.get(this.collection)
             .remove({ id: this.id })
             .write();
     }

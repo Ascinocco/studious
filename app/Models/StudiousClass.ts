@@ -1,12 +1,28 @@
 import { Studious } from './Base/Studious';
 export class StudiousClass extends Studious
 {
-    public static collection: string = 'classes';
+    public collection: string;
+    public name: string;
+    public professor: string;
+    public location: string;
 
-    constructor()
+    constructor(classInfo: any)
     {
-        super();
-        alert(StudiousClass.collection);
-        alert(this.id);
+        super(classInfo, 'classes');
+        this.name = classInfo.name;
+        this.collection = 'classes';
+        this.professor = classInfo.professor;
+        this.location = classInfo.location;
+
+        // alert(this.id);
+        // alert(this.name);
+        // alert(this.location);
+    }
+
+    public static find (query:any): any
+    {
+        return StudiousClass.db.get('classes')
+            .find(query)
+            .value();
     }
 }
