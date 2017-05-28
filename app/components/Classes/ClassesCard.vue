@@ -22,11 +22,11 @@
 
 <script>
     export default {
-        props: ['classData', 'selectedClass'],
+        props: ['classData'],
 
         methods: {
             select() {
-                this.selectedClass = this.classData;
+                this.$emit('updateSelectedClass', this.classData);
             }
         },
 

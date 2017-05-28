@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col col-4 studious-container classes-leftPadding">
             <div v-for="myClass in this.classes">
-                <classes-card v-bind:classData="myClass" v-bind:selectedClass="this.selectedClass"></classes-card>
+                <classes-card v-on:updateSelectedClass="selectClass" v-bind:classData="myClass"></classes-card>
                 <br>
             </div>
         </div>
@@ -38,6 +38,11 @@
 
             selectClass (selectedClass) {
                 this.selectedClass = selectedClass;
+            },
+
+            test (data) {
+                alert('called test function..');
+                alert(data);
             },
 
             init() {
