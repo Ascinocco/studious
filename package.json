@@ -21,6 +21,7 @@
     "graceful-fs": "^4.1.11",
     "lodash": "^4.17.4",
     "lowdb": "^0.16.2",
+    "uniqid": "^4.1.1",
     "username": "^2.3.0",
     "vue": "^2.3.3",
     "vue-loader": "^12.1.0",
