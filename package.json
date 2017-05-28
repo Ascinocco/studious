@@ -11,6 +11,7 @@
   "author": "Anthony Scinocco",
   "dependencies": {
     "@types/lowdb": "^0.15.0",
+    "@types/moment": "^2.13.0",
     "@types/node": "^7.0.22",
     "axios": "^0.16.1",
     "babel-core": "^6.24.1",
@@ -23,6 +24,7 @@
     "graceful-fs": "^4.1.11",
     "lodash": "^4.17.4",
     "lowdb": "^0.16.2",
+    "moment": "^2.18.1",
     "source-map-loader": "^0.2.1",
     "ts-loader": "^2.1.0",
     "typescript": "^2.3.3",

@@ -6,7 +6,8 @@
     "target": "es5",
     "allowJs": true,
     "types": [
-      "node"
+      "node",
+      "lowdb"
     ],
     "typeRoots": [
       "node_modules/@types"

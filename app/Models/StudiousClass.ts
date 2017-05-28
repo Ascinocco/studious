@@ -1,4 +1,6 @@
 import { Studious } from './Base/Studious';
+let moment = require('moment');
+
 export class StudiousClass extends Studious
 {
     public collection: string;
@@ -6,17 +8,50 @@ export class StudiousClass extends Studious
     public professor: string;
     public location: string;
 
+    public startDate: string;
+    public endDate: string;
+    public classPeriods: Array<any>;
+    public color: string;
+
     constructor(classInfo: any)
     {
+        if (classInfo.classPeriods) {
+            classInfo.classPeriods = StudiousClass.parseClassPeriods(classInfo.classPeriods);
+        }
+        
         super(classInfo, 'classes');
-        this.name = classInfo.name;
+        this.name       = classInfo.name;
         this.collection = 'classes';
-        this.professor = classInfo.professor;
-        this.location = classInfo.location;
+        this.professor  = classInfo.professor;
+        this.location   = classInfo.location;
+        this.startDate  = moment(classInfo.startDate);
+        this.endDate    = moment(classInfo.endDate);
+        this.classPeriods = [];
 
-        // alert(this.id);
-        // alert(this.name);
-        // alert(this.location);
+        if (classInfo.classPeriods) {
+            this.addClassPeriods(classInfo.classPeriods);
+        }
+
+        this.color = classInfo.color;
+
+    }
+
+    private static parseClassPeriods(dates: Array<any>): Array<any>
+    {
+        let tempDates = [];
+
+        for (let i = 0; i < dates.length; i++) {
+            tempDates.push(moment(dates[i]));
+        }
+
+        return tempDates;
+    }
+
+    private addClassPeriods (dates: Array<any>): void
+    {
+        for (let i = 0; i < dates.length; i++) {
+            this.classPeriods.push(moment(dates[i]));
+        }
     }
 
     public static find (query: any): StudiousClass
