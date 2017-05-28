@@ -1,3 +1,9 @@
+/**
+ * StudiousClass
+ * Given the somewhat conflicting name with the keyword class
+ * I thought it would be worth noting that class in the context of properties on this object
+ * refers to a class in school i.e MATH3002 or COMP3001 or even just Physics
+ */
 import { Studious } from './Base/Studious';
 let moment = require('moment');
 
@@ -18,7 +24,7 @@ export class StudiousClass extends Studious
         if (classInfo.classPeriods) {
             classInfo.classPeriods = StudiousClass.parseClassPeriods(classInfo.classPeriods);
         }
-        
+
         super(classInfo, 'classes');
         this.name       = classInfo.name;
         this.collection = 'classes';
