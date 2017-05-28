@@ -42,6 +42,13 @@ export class StudiousClass extends Studious
 
     }
 
+    public static find (query: any): StudiousClass
+    {
+        return StudiousClass.db.get('classes')
+            .find(query)
+            .value();
+    }
+
     private static parseClassPeriods(dates: Array<any>): Array<any>
     {
         let tempDates = [];
@@ -58,12 +65,5 @@ export class StudiousClass extends Studious
         for (let i = 0; i < dates.length; i++) {
             this.classPeriods.push(moment(dates[i]));
         }
-    }
-
-    public static find (query: any): StudiousClass
-    {
-        return StudiousClass.db.get('classes')
-            .find(query)
-            .value();
     }
 }
