@@ -19,10 +19,6 @@ export class StudiousHomework extends Studious
             homeworkInfo.dueDate = moment(homeworkInfo.dueDate);
         }
 
-        if (homeworkInfo.attachments) {
-            homeworkInfo.attachments = StudiousHomework.parseAttachements(homeworkInfo.attachments);
-        }
-
         super(homeworkInfo, 'homework');
         this.collection = 'homework';
         this.name = homeworkInfo.name;
@@ -30,14 +26,8 @@ export class StudiousHomework extends Studious
         this.type = homeworkInfo.type;
         this.dueDate = homeworkInfo.dueDate;
         this.weight = homeworkInfo.weight;
-        this.attachments = [];
-
-        if (homeworkInfo.attachements) {
-            this.addAttachements(homeworkInfo.attachements);
-        }
-
+        this.attachments = homeworkInfo.attachments;
         this.notes = homeworkInfo.notes;
-
         this.isComplete = false;
     }
 
@@ -48,15 +38,4 @@ export class StudiousHomework extends Studious
             .value();
     }
 
-    private addAttachements(attachements: Array<any>): void
-    {
-        // TODO: implement add attachments
-        this.attachments = [];
-    }
-
-    private static parseAttachements(attachments: Array<any>): Array<any>
-    {
-        // TODO: implement attachement storage
-        return [];
-    }
 }
