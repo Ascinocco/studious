@@ -19,7 +19,7 @@ export class StudiousClass extends Studious
         // alert(this.location);
     }
 
-    public static find (query:any): any
+    public static find (query: any): StudiousClass
     {
         return StudiousClass.db.get('classes')
             .find(query)

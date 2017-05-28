@@ -12,6 +12,25 @@ let studClass = new StudiousClass({
     location: 'B215'
 });
 
+studClass.update({
+    professor: 'John Smyth'
+});
+
+let result = StudiousClass.find({ location: 'B215' });
+
+alert(result.professor);
+
+// let result = StudiousClass.find({ location: 'B215' });
+// alert(result.professor);
+
+// result.update({
+//     professor: 'John Smyth'
+// })
+
+// result = StudiousClass.find({ location: 'B215' });
+
+// alert(result.professor);
+
 new Vue({
     el: '#studious-app',
     router
