@@ -4,25 +4,31 @@ let fs = require('fs');
 
 let myUsername = username.sync();
 
+let dbFileName = 'db.json';
+let dbFilePath = '/Users/' + myUsername + '/.studious/';
+
 // check if database directory exists
-if (!fs.existsSync('/Users/' + myUsername + '.studious/')) {
-
+if (!fs.existsSync(dbFilePath)) {
     // create directory
+    fs.mkdirSync(dbFilePath)
 
-    if (!fs.existsSync('/Users/' + myUsername + '.studious/db.json')) {
-
+    if (!fs.existsSync(dbFilePath + dbFileName)) {
         // create file
-
+        fs.writeFileSync(dbFilePath + dbFileName, "", 'utf-8');
     }
-
 }
 
 
 
-let db = low('/Users/' + myUsername + '.studious/db.json');
+let db = low(dbFilePath + dbFileName);
 
 let schema = {
-    users: [],
+    user: {
+        username: myUsername,
+        name: '',
+        profilePicturePath: '',
+        isFirstRun: true
+    },
     classes: [],
     homework: []
 }

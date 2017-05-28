@@ -1,15 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
         <title>Studious</title>
+        <link rel="stylesheet" type="text/css" href="static/kube-6.5.2/dist/css/kube.css">
+        <link rel="stylesheet" type="text/css" href="static/css/main.css">
     </head>
 
-    <body>
+    <body class="layouts" ontouchstart="">
         <div id="studious-app">
-            <div class="container">
-                <router-view></router-view>
-            </div>
+            <tab-nav></tab-nav>
+            <router-view></router-view>
         </div>
+
+        <script src="static/patches/electron-js-import-pre-scripts-patch.js"></script>
+        <script src="node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="static/kube-6.5.2/dist/js/kube.js"></script>
         <script src="dist/bundle.js"></script>
+        <script src="static/patches/electron-js-import-after-scripts-patch.js"></script>
     </body>
 </html>

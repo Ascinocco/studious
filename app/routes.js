@@ -1,13 +1,16 @@
 import VueRouter from 'vue-router';
 
-import Login from './components/Login.vue';
-import Register from './components/Register.vue';
+import Classes from './components/Classes.vue';
+import Homework from './components/Homework.vue';
+import Settings from './components/Settings.vue';
 
 const routes = [
-    { path: '/', component: Login },
-    { path: '/register', component: Register }
+    { path: '/', component: Classes },
+    { path: '/homework', component: Homework },
+    { path: '/settings', component: Settings }
 ];
 
 export default new VueRouter({
-    routes
+    routes,
+    linkActiveClass: 'active'
 });

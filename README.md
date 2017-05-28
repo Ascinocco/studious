@@ -5,3 +5,6 @@ A class schudling app that makes sense
 using lowdb for json file storage
 url:
 https://github.com/typicode/lowdb 
+
+### CSS library
+https://imperavi.com/kube/docs/
