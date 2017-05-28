@@ -14,9 +14,12 @@
                     <p>Some generic description of the class</p>
                 </div>
 
-                <div class="card-footer">
-                    <button class="button secondary outline small">View</button>
-                    <button class="button secondary outline small">Delete</button>
+                <div class="col card-footer">
+                    <!--<button class="button secondary outline small">View</button>
+                    <button class="button secondary outline small">Delete</button> -->
+                    <button class="button secondary outline small">
+                        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                    </button>
                 </div>
             </div>
         </div>
