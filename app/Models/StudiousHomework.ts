@@ -12,6 +12,7 @@ export class StudiousHomework extends Studious
     public attachments: Array<any>;
     public notes: string;
     public isComplete: boolean;
+    public tasks: Array<any>;
 
     constructor(homeworkInfo: any)
     {
@@ -28,6 +29,8 @@ export class StudiousHomework extends Studious
         this.weight = homeworkInfo.weight;
         this.attachments = homeworkInfo.attachments;
         this.notes = homeworkInfo.notes;
+        this.tasks = [];
+        this.tasks = homeworkInfo.tasks;
         this.isComplete = false;
     }
 

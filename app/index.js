@@ -1,8 +1,8 @@
 import './config/bootstrap';
 import router from './routes';
 
-import SideNav from './components/partials/SideNav.vue';
-Vue.component('side-nav', SideNav);
+import TabNav from './components/partials/TabNav.vue';
+Vue.component('tab-nav', TabNav);
 
 new Vue({
     el: '#studious-app',

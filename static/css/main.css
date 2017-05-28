@@ -1,0 +1,23 @@
+.studious-container {
+    margin: 10px
+}
+
+.studious-tabContainer {
+    margin: 10px 0.5px 0px 0.5px;
+}
+
+.card {
+    border-bottom: 1px solid;
+    padding: 25px 25px 20px 25px;
+}
+
+.card-active {
+    padding: 0px 20px 0px 0px;
+    margin: 0px;
+    background-color: #cce6ff;
+}
+
+.inner-page {
+    padding: 25px;
+    margin: 25px;
+}

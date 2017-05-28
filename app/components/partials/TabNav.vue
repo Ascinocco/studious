@@ -1,7 +1,7 @@
 <template>
-    <div class="row">
+    <div class="row studious-tabContainer">
         <div class="col col-12">
-            <nav class="tabs sideNav-tabsMarginTop" data-component="tabs">
+            <nav class="tabs" data-component="tabs">
                 <ul>
                     <router-link tag="li" to="/" exact><a>Classes</a></router-link>
                     <router-link tag="li" to="/homework" exact><a>Homework</a></router-link>
@@ -19,7 +19,5 @@
 </script>
 
 <style>
-    .sideNav-tabsMarginTop {
-        margin-top: 10px;
-    }
+
 </style>
