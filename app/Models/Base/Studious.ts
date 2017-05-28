@@ -27,7 +27,7 @@ export class Studious
 
     public update (updates: any): any
     {
-        db.get(this.collection)
+        return db.get(this.collection)
             .find({ id: this.id })
             .assign(updates)
             .write();
@@ -37,6 +37,6 @@ export class Studious
     {
         db.get(this.collection)
             .remove({ id: this.id })
-            .write();
+            .write();   
     }
 }
