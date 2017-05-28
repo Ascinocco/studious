@@ -17,6 +17,11 @@ module.exports = {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 loader: 'babel-loader'
+            },
+            {
+                test: /\.ts$/,
+                exclude: /node_modules/,
+                loader: 'ts-loader'
             }, 
             {
                 test: /\.vue$/,
@@ -29,9 +34,12 @@ module.exports = {
     resolve: {
         alias: {
             'vue$': 'vue/dist/vue.common.js'
-        }
+        },
+        extensions: [ ".ts", ".js" ]
     },
 
-    plugins: []
+    plugins: [],
+
+    devtool: 'inline-source-map'
 };
 
