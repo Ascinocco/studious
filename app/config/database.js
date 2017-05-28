@@ -27,7 +27,6 @@ let schema = {
         username: myUsername,
         name: '',
         profilePicturePath: '',
-        theme: 'default',
         isFirstRun: true
     },
     classes: [],
