@@ -11,6 +11,8 @@ export class StudiousClass extends Studious
 {
     public collection: string;
     public name: string;
+    public description: string;
+    public courseCode: string;
     public professor: string;
     public location: string;
 
@@ -27,6 +29,8 @@ export class StudiousClass extends Studious
 
         super(classInfo, 'classes');
         this.name       = classInfo.name;
+        this.description = classInfo.description;
+        this.courseCode = classInfo.courseCode;
         this.collection = 'classes';
         this.professor  = classInfo.professor;
         this.location   = classInfo.location;

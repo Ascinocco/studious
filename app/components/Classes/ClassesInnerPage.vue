@@ -1,40 +1,56 @@
 <template>
-    <div class="col col-7 studious-container classes-rightPadding">
-            <div class="inner-page">
-                <div class="inner-header">
-                    <h2>Intro to C++</h2>
-                </div>
-
-                <div class="inner-body">
-                    <p>Intoduction to Programming in the C++ Language</p>
-                    <ul>
-                        <li>Prof: Jason Gubbels</li>
-                        <li>Location: B225</li>
-                        <li>Start Date: 2017-04-08</li>
-                        <li>Start Date: 2017-08-21</li>
-                        <li> Class Periods: 
-                            <ul>
-                                <li>Tuesday: 16:00 - 19:00</li>
-                            </ul>
-                        </li>
-                        <li>Color: Green</li>
-                    </ul>
-                </div>
-
-                <div class="inner-footer">
-                    <button class="button secondary outline small">Edit</button>
-                    <button class="button secondary outline small">View Homework</button>
-                    <button class="button secondary outline small">Delete</button>
-                </div>
-            </div>
+    <div class="inner-page">
+        <div class="inner-header">
+            <h2>{{ this.selectedClass.name }}</h2>
         </div>
+
+        <div class="inner-body">
+            <p>{{ this.selectedClass.description }}</p>
+            <ul>
+                <li>Prof: {{ this.selectedClass.professor }}</li>
+                <li>Location: {{ this.selectedClass.location }}</li>
+                <li>Start Date: {{ this.selectedClass.startDate }}</li>
+                <li>End Date: {{ this.selectedClass.endDate }}</li>
+                <li> Class Periods:
+                    <ul>
+                        <li v-for="period in this.selectedClass.classPeriods">
+                            {{ period.day }} | {{ period.from }}
+                        </li>
+                    </ul>
+                </li>
+                <li>Color: <i class="inner-page-classColor" v-bind:style="{ backgroundColor: this.selectedClass.color }">&nbsp;</i></li>
+            </ul>
+        </div>
+
+        <div class="inner-footer">
+            <button class="button secondary outline small">Edit</button>
+            <button class="button secondary outline small">View Homework</button>
+            <button class="button secondary outline small">Delete</button>
+        </div>
+    </div>
 </template>
 
 <script>
     export default {
-        
+        props: ['selectedClass'],
+
+        methods: {
+            init() {
+
+            }
+        },
+
+        mounted () {
+            console.log('Component Mounted...');
+        },
+
+        created () {
+            console.log('Component Created...');
+            this.init();
+        }
     }
 </script>
 
 <style>
+
 </style>

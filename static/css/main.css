@@ -11,15 +11,21 @@
     padding: 25px 25px 20px 25px;
 }
 
-.card-active {
-    padding: 0px 20px 0px 0px;
-    margin: 0px;
-    border: 1px solid;
-    background-color: #cce6ff;
-}
-
 .inner-page {
     padding: 25px;
     margin: 25px;
     border-bottom: 1px solid;
+}
+
+.inner-page-classColor {
+    padding: 0px 15px 0px 0px;
+    margin: 0px;
+    border: 1px solid;
+}
+
+.card-classColor {
+    padding: 0px 18px 0px 0px;
+    margin: 0px;
+    border: 1px solid;
+    float: right;
 }

@@ -1,7 +1,15 @@
 <template>
     <div class="row">
-        <classes-card></classes-card>
-        <classes-inner-page></classes-inner-page>
+        <div class="col col-4 studious-container classes-leftPadding">
+            <div v-for="myClass in this.classes">
+                <classes-card v-bind:classData="myClass" v-bind:selectedClass="this.selectedClass"></classes-card>
+                <br>
+            </div>
+        </div>
+        
+        <div class="col col-7 studious-container classes-rightPadding">
+            <classes-inner-page v-bind:selectedClass="this.selectedClass"></classes-inner-page>
+        </div>
     </div>
 </template>
 
@@ -25,13 +33,17 @@
 
         methods: {
             loadClasses () {
-                let classList = StudiousClass.find({ name: 'Math' });
-                this.classes.push(classList);
-                console.log(classList);
+                this.classes = StudiousClass.find();
             },
 
-            selectClass () {
+            selectClass (selectedClass) {
+                this.selectedClass = selectedClass;
+            },
 
+            init() {
+                this.loadClasses();
+                // pass in first loaded class on initial app load
+                this.selectClass(this.classes[0]);
             }
         },
 
@@ -42,7 +54,7 @@
         created () {
             console.log('Component Created...');
             console.log('Loading Data...');
-            this.loadClasses();
+            this.init();
         }       
     }
 </script>
