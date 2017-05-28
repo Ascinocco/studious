@@ -2,11 +2,10 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         
         <title>Studious</title>
-        <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+        <link rel="stylesheet" type="text/css" href="static/kube-6.5.2/dist/css/kube.css">
     </head>
 
     <body class="layouts" ontouchstart="">
@@ -15,8 +14,9 @@
             <router-view></router-view>
         </div>
 
+        <script src="static/patches/electron-js-import-patch.js"></script>
         <script src="node_modules/jquery/dist/jquery.min.js"></script>
-        <script src="semantic/dist/semantic.min.js"></script>
+        <script src="static/kube-6.5.2/dist/js/kube.js"></script>
         <script src="dist/bundle.js"></script>
     </body>
 </html>

@@ -22,6 +22,7 @@
     "css-loader": "^0.28.2",
     "electron": "^1.6.8",
     "graceful-fs": "^4.1.11",
+    "jquery": "2.1.4",
     "lodash": "^4.17.4",
     "lowdb": "^0.16.2",
     "moment": "^2.18.1",
