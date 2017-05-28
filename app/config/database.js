@@ -14,7 +14,7 @@ if (!fs.existsSync(dbFilePath)) {
 
     if (!fs.existsSync(dbFilePath + dbFileName)) {
         // create file
-        fs.writeFileSync(dbFilePath + dbFileName);
+        fs.writeFileSync(dbFilePath + dbFileName, "", 'utf-8');
     }
 }
 

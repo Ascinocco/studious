@@ -5980,14 +5980,20 @@ if (!fs.existsSync(dbFilePath)) {
 
     if (!fs.existsSync(dbFilePath + dbFileName)) {
         // create file
-        fs.writeFileSync(dbFilePath + dbFileName);
+        fs.writeFileSync(dbFilePath + dbFileName, "", 'utf-8');
     }
 }
 
 let db = __WEBPACK_IMPORTED_MODULE_0_lowdb___default()(dbFilePath + dbFileName);
 
 let schema = {
-    users: [],
+    user: {
+        username: myUsername,
+        name: '',
+        profilePicturePath: '',
+        theme: 'default',
+        isFirstRun: true
+    },
     classes: [],
     homework: []
 };

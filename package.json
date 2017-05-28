@@ -5,7 +5,8 @@
   "main": "main.js",
   "scripts": {
     "start": "electron main.js",
-    "build": "webpack"
+    "build": "webpack",
+    "go": "npm run build && npm start"
   },
   "author": "Anthony Scinocco",
   "dependencies": {
