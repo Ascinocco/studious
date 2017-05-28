@@ -18,8 +18,6 @@ export class Studious
         data.id = this.id;
         this.collection = collection;
 
-        alert(this.collection);
-
         db.get(this.collection)
             .push(data)
             .write();
