@@ -85,8 +85,8 @@
 
         methods: {
             addClass () {
+                alert(this.class.name);
                 this.create();
-                this.clear();
                 this.closeModal();
             },
 
@@ -105,7 +105,7 @@
 
             closeModal () {
                 this.$emit('toggleModal');
-            },
+            }
         },
 
         mounted () {
@@ -114,6 +114,7 @@
 
         created () {
             console.log('Component Created...');
+            this.clear();
         },
     }
 </script>
