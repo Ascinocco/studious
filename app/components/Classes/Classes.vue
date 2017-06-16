@@ -1,20 +1,31 @@
 <template>
-    <div class="row">
-        <div class="col col-4 studious-container classes-leftPadding">
-            <div v-for="myClass in this.classes">
-                <classes-card v-on:updateSelectedClass="selectClass" v-bind:classData="myClass"></classes-card>
-                <br>
+    <div>
+        <add-class-modal v-on:toggleModal="toggleAddClassModal" v-if="showAddClassModal"></add-class-modal>
+
+        <div class="row">
+            <div class="col col-4 studious-container">
+                <div v-for="myClass in this.classes">
+                    <classes-card v-on:updateSelectedClass="selectClass" v-bind:classData="myClass"></classes-card>
+                    <br>
+                </div>
             </div>
-        </div>
-        
-        <div class="col col-7 studious-container classes-rightPadding">
-            <classes-inner-page v-bind:selectedClass="this.selectedClass"></classes-inner-page>
+            
+            <div class="col col-6 studious-container">
+                <classes-inner-page v-bind:selectedClass="this.selectedClass"></classes-inner-page>
+            </div>
+
+            <div class="col col-1 studious-container" style="text-align: right;">
+                <button class="button outline" v-on:click="toggleAddClassModal()">
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                </button>
+            </div>
         </div>
     </div>
 </template>
 
 <script>
     import ClassesCard from './ClassesCard.vue';
+    import AddClassModal from './AddClassModal.vue';
     import ClassesInnerPage from './ClassesInnerPage.vue';
     import { StudiousClass } from '../../Models/StudiousClass';
 
@@ -22,12 +33,14 @@
         data () {
             return {
                 classes: [],
-                selectedClass: {}
+                selectedClass: {},
+                showAddClassModal: false
             }
         },
 
         components: {
             'classes-card': ClassesCard,
+            'add-class-modal': AddClassModal,
             'classes-inner-page': ClassesInnerPage
         },
 
@@ -43,6 +56,18 @@
             test (data) {
                 alert('called test function..');
                 alert(data);
+            },
+
+            toggleAddClassModal () {
+                if (this.showAddClassModal == true) {
+                    this.showAddClassModal = false;
+                } else if (this.showAddClassModal == false) {
+                    this.showAddClassModal = true;
+                }
+            },
+
+            addClass() {
+
             },
 
             init() {
@@ -71,5 +96,14 @@
 
     .classes-leftPadding {
         padding-left: 50px;
+    }
+
+    div#addClass-modal {
+        width: 50%;
+        margin: auto;
+    }
+
+    div#addClass-modalHeader {
+        text-align: center;
     }
 </style>
