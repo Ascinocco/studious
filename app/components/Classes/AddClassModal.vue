@@ -8,47 +8,47 @@
                     <div class="form">
                         <div class="form-item">
                             <label>Name</label>
-                            <input type="text" name="name" v-model="this.class.name">
+                            <input type="text" name="name" v-model="this.newClass.name">
                         </div>
 
                         <div class="form-item">
                             <label>Description</label>
-                            <input type="text" name="description" v-model="this.class.description">
+                            <input type="text" name="description" v-model="this.newClass.description">
                         </div>
 
                         <div class="form-item">
                             <label>Course Code</label>
-                            <input type="text" name="courseCode" v-model="this.class.courseCode">
+                            <input type="text" name="courseCode" v-model="this.newClass.courseCode">
                         </div>
 
                         <div class="form-item">
                             <label>Professor</label>
-                            <input type="text" name="professor" v-model="this.class.professor">
+                            <input type="text" name="professor" v-model="this.newClass.professor">
                         </div>
 
                         <div class="form-item">
                             <label>Location</label>
-                            <input type="text" name="location" v-model="this.class.location">
+                            <input type="text" name="location" v-model="this.newClass.location">
                         </div>
 
                         <div class="form-item">
                             <label>Start Date</label>
-                            <input type="text" name="startDate" v-model="this.class.startDate">
+                            <input type="text" name="startDate" v-model="this.newClass.startDate">
                         </div>
 
                         <div class="form-item">
                             <label>End Date</label>
-                            <input type="text" name="endDate" v-model="this.class.endDate">
+                            <input type="text" name="endDate" v-model="this.newClass.endDate">
                         </div>
 
                         <div class="form-item">
                             <label>Class Periods</label>
-                            <input type="text" name="classPeriods" v-model="this.class.classPeriods">
+                            <input type="text" name="classPeriods" v-model="this.newClass.classPeriods">
                         </div>
 
                         <div class="form-item">
                             <label>Color</label>
-                            <input type="text" name="color" v-model="this.class.color">
+                            <input type="text" name="color" v-model="this.newClass.color">
                         </div>
 
                         <div class="form-item" style="text-align: right;">
@@ -69,7 +69,7 @@
 
         data () {
             return {
-                class: {
+                newClass: {
                     name: '',
                     description: '',
                     courseCode: '',
@@ -85,7 +85,7 @@
 
         methods: {
             addClass () {
-                alert(this.class.name);
+                alert(this.newClass.name);
                 this.create();
                 this.closeModal();
             },
@@ -96,11 +96,11 @@
             },
 
             create () {
-                let myClass = new StudiousClass(this.class);
+                let myClass = new StudiousClass(this.newClass);
             },
 
             clear () {
-                this.class = {};
+                this.newClass = {};
             },
 
             closeModal () {
