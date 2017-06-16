@@ -99,7 +99,7 @@
     }
 
     div#addClass-modal {
-        width: 50%;
+        width: 45%;
         margin: auto;
     }
 
